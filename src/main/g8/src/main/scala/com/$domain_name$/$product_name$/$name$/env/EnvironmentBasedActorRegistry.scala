@@ -49,7 +49,7 @@ abstract class EnvironmentBasedActorRegistry(env: String, http: Http) {
     case s: List[ServerAddress] => MongoConnection(s)(mongoDbName)
   }
 
-  val myActor = actorOf(new $actor_name$(db("$$mongodb_db"))).start()
+  val myActor = actorOf(new $actor_name$(db("$mongodb_db$"))).start()
 
   val supervisor = Supervisor(
     SupervisorConfig(
