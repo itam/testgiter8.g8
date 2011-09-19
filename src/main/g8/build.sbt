@@ -8,7 +8,7 @@ seq(sbtassembly.Plugin.assemblySettings: _*)
 
 seq(webSettings :_*)
 
-jettyPort := "$jetty_port$"
+jettyPort := $jetty_port$
 
 libraryDependencies ++= Seq(
   //Casbah
