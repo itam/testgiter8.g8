@@ -36,7 +36,7 @@ class TestEnvironment(env: String, http: Http) extends EnvironmentBasedActorRegi
 abstract class EnvironmentBasedActorRegistry(env: String, http: Http) {
 
   def mongoUrl: String = prop("mongoUrl", "$mongodb_host$")
-  def mongoPort: Int = prop("mongoPort", "$mongodb_port$")
+  def mongoPort: Int = prop("mongoPort", $mongodb_port$)
   def mongoDbName: String = prop("mongoDbName", "$mongodb_db$")
 
   def host: String = prop("host", "$mongodb_host$")

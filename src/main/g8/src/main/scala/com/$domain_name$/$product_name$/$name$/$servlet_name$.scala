@@ -15,7 +15,7 @@ class $servlet_name$ extends ScalatraServlet {
     "GET with id: " + params("id")
   }
 
-  get("/persistence") {
+  get("/$name$") {
     "GET with var: " + params("var")
   }
 

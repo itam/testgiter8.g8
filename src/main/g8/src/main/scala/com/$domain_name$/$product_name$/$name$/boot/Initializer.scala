@@ -13,7 +13,7 @@ class Initializer extends ServletContextListener {
   logger.info("Running Initializer")
 
   val env = System.getProperty("env")
-  logger.info("Starting Persistence Core in env: " + env)
+  logger.info("Starting $name$ Core in env: " + env)
   if (env == null){
     logger.error("Env must not be null!")
     throw new IllegalArgumentException("Illegal environment")
