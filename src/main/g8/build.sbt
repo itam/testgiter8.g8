@@ -4,11 +4,11 @@ version := "$version$"
 
 scalaVersion := "$scala_version$"
 
-jettyPort := $jetty_port$
-
 seq(sbtassembly.Plugin.assemblySettings: _*)
 
 seq(webSettings :_*)
+
+jettyPort := $jetty_port$
 
 libraryDependencies ++= Seq(
   //Casbah
@@ -35,13 +35,16 @@ libraryDependencies ++= Seq(
   //"org.specs2" %% "specs2-scalaz-core" % "6.0.RC2" % "test"
   "net.databinder" %% "dispatch-http" % "0.8.4",
   "com.recursivity" %% "recursivity-commons" % "0.5.3",
-  "org.slf4j" % "jcl-over-slf4j" % "1.5.10",
+  "org.slf4j" % "jcl-over-slf4j" % "1.5.10"
 )
 
 resolvers ++= Seq(
   "Sonatype OSS" at "http://oss.sonatype.org/content/repositories/releases/",
   "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
-  "Web plugin repo" at "http://siasia.github.com/maven2"
+  "Web plugin repo" at "http://siasia.github.com/maven2",
+  "Akka Repo" at "http://akka.io/repository",
+  "repo.novus rels" at "http://repo.novus.com/releases/",
+  "repo.novus snaps" at "http://repo.novus.com/snapshots/",
   "Local Maven Repository" at "file://"+Path.userHome+"/.m2/repository"
 )
 
