@@ -4,11 +4,11 @@ version := "$version$"
 
 scalaVersion := "$scala_version$"
 
+jettyPort := $jetty_port$
+
 seq(sbtassembly.Plugin.assemblySettings: _*)
 
 seq(webSettings :_*)
-
-jettyPort := $jetty_port$
 
 libraryDependencies ++= Seq(
   //Casbah
